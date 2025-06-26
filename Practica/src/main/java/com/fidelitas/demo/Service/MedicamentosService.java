@@ -5,10 +5,17 @@
 
 package com.fidelitas.demo.Service;
 
-/**
- *
- * @author Andres
- */
-public class MedicamentosService {
+import com.fidelitas.demo.Domain.Medicamentos;
+import java.util.List;
 
+public interface MedicamentosService {
+    
+    public List<Medicamentos> getMedicamentos(int idCategorias);
+    
+    // Se inserta un nuevo categoria si el id del categoria esta vacío
+    // Se actualiza un categoria si el id del categoria NO esta vacío
+    public void save(Medicamento medicamentos);
+    
+    // Se elimina el categoria que tiene el id pasado por parámetro
+    public void delete(Medicamento medicamentos));
 }
