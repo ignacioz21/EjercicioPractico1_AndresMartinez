@@ -1,0 +1,16 @@
+   <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmacia Salud Total</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header th:replace="fragments/header :: header"></header>
+    <nav th:replace="fragments/navbar :: navbar"></nav>
+    <main>
+        <div th:replace="${content}"></div>
+    </main>
+    <footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>
