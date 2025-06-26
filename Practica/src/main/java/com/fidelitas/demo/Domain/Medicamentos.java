@@ -7,8 +7,8 @@ import lombok.Data;
 
 @Data
 @Entity
-@Tavle(name="medicamentos")
-public class Medicamentos implements Serielizable {
+@Table(name="medicamentos")
+public class Medicamentos implements Serializable {
     
     private static final long serialVersionUID = 1L;
       
