@@ -8,6 +8,6 @@ package com.fidelitas.demo.DAO;
 import com.fidelitas.demo.Domain.Medicamentos;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public class MedicamentosDAO extends JpaRepository <Medicamentos,Long> {
+public interface MedicamentosDAO extends JpaRepository <Medicamentos,Long> {
 
 }

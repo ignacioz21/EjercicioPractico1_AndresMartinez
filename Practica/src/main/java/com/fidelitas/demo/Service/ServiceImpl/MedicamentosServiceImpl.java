@@ -22,29 +22,25 @@ public class MedicamentosServiceImpl implements MedicamentosService {
     @Override
     @Transactional(readOnly = true)
     public List<Medicamentos> getMedicamentos(int idCategorias) {
-        var lista = categoriaDao.findAll();
+        var lista = medicamentosDAO.findAll();
         return lista;
     }
 
     @Transactional(readOnly = true)
     public Medicamentos getMedicamento(Medicamentos medicamentos) {
-        try {
-            return medicamentosDAO.findById(medicamentos.getIDMedicamentos()).orElse(null); //Posible error 
-        } catch (Exception e) {
-            System.out.println("Error: " + e);
-        }
+       return medicamentosDAO.findById(medicamentos.getID()).orElse(null); //Posible error 
     }
 
     @Override
     @Transactional
     public void save(Medicamentos medicamentos) {
-        categoriaDao.save(medicamentos);
+        medicamentosDAO.save(medicamentos);
     }
 
     @Override
     @Transactional
     public void delete(Medicamentos medicamentos) {
-        categoriaDao.delete(medicamentos);
+        medicamentosDAO.delete(medicamentos);
     }
     
 }
