@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="base :: base(~{::body})">
+<body>
+    <div>
+        <h2>Quejas y Sugerencias</h2>
+        <form th:action="@{/contacto/enviar}" method="post">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required><br>
+            <label>Email:</label>
+            <input type="email" name="email" required><br>
+            <label>Mensaje:</label><br>
+            <textarea name="mensaje" rows="5" required></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+        <div th:if="${mensajeEnviado}">
+            <p>¡Gracias por tu mensaje!</p>
+        </div>
+    </div>
+</body>
+</html>
