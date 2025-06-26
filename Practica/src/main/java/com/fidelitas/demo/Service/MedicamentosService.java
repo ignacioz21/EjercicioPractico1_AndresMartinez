@@ -10,7 +10,9 @@ import java.util.List;
 
 public interface MedicamentosService {
     
-    public List<Medicamentos> getMedicamentos(int idCategorias);
+    public List<Medicamentos> getMedicamentos();
+    
+    public Medicamentos getMedicamento(Medicamentos medicamento);
     
     // Se inserta un nuevo categoria si el id del categoria esta vacío
     // Se actualiza un categoria si el id del categoria NO esta vacío
