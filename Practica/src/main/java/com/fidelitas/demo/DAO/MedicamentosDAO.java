@@ -5,10 +5,9 @@
 
 package com.fidelitas.demo.DAO;
 
-/**
- *
- * @author Andres
- */
-public class MedicamentosDAO {
+import com.fidelitas.demo.Domain.Medicamentos;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public class MedicamentosDAO extends JpaRepository <Medicamentos,Long> {
 
 }
