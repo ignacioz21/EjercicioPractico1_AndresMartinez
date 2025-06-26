@@ -24,7 +24,7 @@ public class MedicamentosController {
     @Autowired
     private MedicamentosService medicamentosService;
     
-    @GetMapping("/litado")
+    @GetMapping("/listado")
         private String listado(Model model) {
         var medicamentos = medicamentosService.getMedicamentos();
         model.addAttribute("medicamentos", medicamentos);
