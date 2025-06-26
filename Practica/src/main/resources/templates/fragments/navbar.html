@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+    <div th:fragment="navbar">
+        <nav>
+            <a th:href="@{/}">Inicio</a> |
+            <a th:href="@{/medicamentos/listado}">Medicamentos</a> |
+            <a th:href="@{/categoria/listado}">Categorías</a> |
+            <a th:href="@{/contacto}">Quejas y Sugerencias</a>
+        </nav>
+    </div>
+</body>
+</html>
